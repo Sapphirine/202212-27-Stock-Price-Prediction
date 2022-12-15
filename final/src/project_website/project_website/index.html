@@ -4,38 +4,45 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html> 
-	<head>
-		<title>Prediction of Stock Trend with Media Sentiment Analysis #0</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    	<link href="build/nv.d3.css" rel="stylesheet" type="text/css">
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
-    	<script src="build/nv.d3.js"></script>
-	</head>
-	<body>
+<html>
 
-		<!-- Header -->
-			<div id="header">
+<head>
+	<title>Stock Price Prediction with Sentiment Analysis #0</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<link href="build/nv.d3.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<script src="build/nv.d3.js"></script>
+</head>
 
-				<div class="top">
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+	<!-- Header -->
+	<div id="header">
 
-					<!-- Logo -->
-						<div id="logo">
-							<!-- <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span> -->
-							<h1 id="title">Stock Price Prediction with Sentiment Analysis</h1>
-							<p>Columbia University <br>
-								E6893 Big Data Analytics<br>
-							</p>
-						</div>
+		<div class="top">
 
-					<!-- Nav -->
-						<nav id="nav">
-							<!--
+			<!-- Logo -->
+			<div id="logo">
+				<!-- <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span> -->
+				<h1 id="title">Stock Price Prediction with Sentiment Analysis</h1>
+				<p>Columbia University <br>
+					E6893 Big Data Analytics<br>
+					Project:2022 12-16
+				</p>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<!--
 
 								Prologue's nav expects links in one of two formats:
 
@@ -48,307 +55,304 @@
 								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
 
 							-->
-							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Abstract</span></a></li>
-								<li><a href="#Background" id="Background-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Background</span></a></li>
-								<li><a href="#overview" id="overview-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Overview</span></a></li>
-								<li><a href="#results" id="results-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Results</span></a></li>
-								<li><a href="#references" id="references-link" class="skel-layers-ignoreHref"><span class="icon fa-th">References</span></a></li>
-								<li><a href="#team" id="team-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Our Team</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+				<ul>
+					<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span
+								class="icon fa-home">Abstract</span></a></li>
+					<li><a href="#Background" id="Background-link" class="skel-layers-ignoreHref"><span
+								class="icon fa-th">Background</span></a></li>
+					<li><a href="#overview" id="overview-link" class="skel-layers-ignoreHref"><span
+								class="icon fa-th">Overview</span></a></li>
+					<li><a href="#results" id="results-link" class="skel-layers-ignoreHref"><span
+								class="icon fa-th">Results</span></a></li>
+					<li><a href="#references" id="references-link" class="skel-layers-ignoreHref"><span
+								class="icon fa-th">References</span></a></li>
+					<li><a href="#team" id="team-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Our
+								Team</span></a></li>
+					<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span
+								class="icon fa-envelope">Contact</span></a></li>
+				</ul>
+			</nav>
 
+		</div>
+
+		<div class="bottom">
+
+			<!-- Social Icons -->
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Intro -->
+		<section id="top" class="one dark cover">
+			<div class="container">
+
+				<h2 class="alt">Stock Price Prediction with Sentiment Analysis</h2>
+				<p>Shengqi Cao (sc5124) Jingchao Hu (jh4312) Wenshuo Xie (wx2283)</p>
+
+
+				<footer>
+					<a href="#background" class="btn btn-outline-primary btn-lg">Let's start!</a>
+				</footer>
+
+			</div>
+		</section>
+
+		<!-- Portfolio -->
+		<section id="background" class="two">
+			<div class="container">
+
+				<header>
+					<h2>Background</h2>
+				</header>
+
+				<p align="center">
+					Stock prediction has been one of the most popular topic
+					in the field of data analysis. It is known to all that public
+					sentiment toward the market has a strong correlation with
+					the stock price. In this paper, we will implement sentiment
+					analysis on the twitter data and utilize some machine learning algorithms to predict the stock
+					price basing on the analysis result of twitter data.
+				</p>
+
+
+
+			</div>
+		</section>
+
+
+		<section id="overview" class="three">
+			<div class="container">
+
+				<header>
+					<h2>Overview</h2>
+				</header>
+
+				<h3 align="left">Architecture</h3>
+
+				<a href="#" class="image fit"><img src="images\overview.png" alt="" /></a>
+				<br>
+				<h3 align="left">Technologies Used</h3>
+
+				<p align="left">
+					<font size="3" face="arial" color="black">
+						Hadoop, Spark, Jupyter Notebook, sklearn(MLP, Random Forest, Linear Regression), D3, Node Js
+					</font>
+				</p>
+
+
+				<h3 align="left">Dataset</h3>
+
+				<p align="left" style="text-indent:-2em;padding:2em">
+					<font size="4" face="arial" color="black">
+						Historical stock price dataset:
+						<br>
+					</font>
+
+					<font size="3" face="arial" color="black">
+						Microsoft,Nasdaq (Yahoo Finance)
+					</font>
+				</p>
+
+				<p align="left" style="text-indent:-2em;padding:2em">
+					<font size="4" face="arial" color="black">
+						Twitter7​ ​dataset​:
+						<br>
+					</font>
+
+					<font size="3" face="arial" color="black">
+						25GB​ ​
+						<br>
+						between​ ​June​ ​to​ ​December​ ​in​ ​2009
+						<br>
+						476​ ​million tweets​ ​collected
+					</font>
+				</p>
+
+				<h3 align="left">Algorithm</h3>
+
+				<p align="left">
+					<font size="3" face="arial" color="black">
+						Linear Regression, Random Forest and MLP
+					</font>
+				</p>
+
+
+			</div>
+		</section>
+
+
+		<section id="results" class="two">
+			<div class="container">
+
+				<header>
+					<h2>Results</h2>
+				</header>
+
+				<!-- <div id="show_wrapper"><iframe id="show"></iframe></div> -->
+
+				<h3 align="left">Test Result</h3>
+
+				<div class="row pb-5">
+					<div class="col">
+						<article class="item">
+							<a href="#" class="image fit"><img src="images/LR.png" alt="" /></a>
+							<header>
+								<h3>Linear Regression</h3>
+							</header>
+						</article>
+					</div>
+					<div class="col">
+						<article class="item">
+							<a href="#" class="image fit"><img src="images/RF.png" alt="" /></a>
+							<header>
+								<h3>Random Forest</h3>
+							</header>
+						</article>
+					</div>
+					<div class="col">
+						<article class="item">
+							<a href="#" class="image fit"><img src="images/MLP.png" alt="" /></a>
+							<header>
+								<h3>MLP</h3>
+							</header>
+						</article>
+					</div>
+				</div>
+
+				<h3 align="left">Result Evaluation</h3>
+
+
+				<div class="row">
+					<div class="col-6">
+						<article class="item">
+							<a href="#" class="image fit"><img src="images/Evaluation.png" alt="" /></a>
+							<header>
+								<h3>MSE and RMSE for the three algrithms</h3>
+							</header>
+						</article>
+					</div>
+				</div>
+
+
+
+			</div>
+		</section>
+
+		<section id="references" class="three">
+			<div class="container">
+
+				<header>
+					<h2>References</h2>
+				</header>
+
+				<p align="left">
+					1. Kordonis, John, Symeon Symeonidis, and Avi Arampatzis. "Stock price forecasting via sentiment
+					analysis on Twitter." Proceedings of the 20th Pan-Hellenic Conference on Informatics. 2016.<br>
+					<a href="https://dl.acm.org/doi/pdf/10.1145/3003733.3003787" target="_blank">
+						https://dl.acm.org/doi/pdf/10.1145/3003733.3003787</a>
+					<br>
+					2. Mittal, Anshul, and Arpit Goel. "Stock prediction using twitter sentiment analysis." Standford
+					University, CS229 15 (2012): 2352.<br>
+					<a href="http://cs229.stanford.edu/proj2011/GoelMittal-StockMarketPredictionUsingTwitterSentimentAnalysis.pdf"
+						target="_blank">http://cs229.stanford.edu/proj2011/GoelMittal-StockMarketPredictionUsingTwitterSentimentAnalysis.pdf</a>
+					<br>
+					3. Sheta, Alaa F., Sara Elsir M. Ahmed, and Hossam Faris. "A comparison between regression,
+					artificial neural networks and support vector machines for predicting stock market index." Soft
+					Computing 7.8 (2015): 2.<br>
+					<a href="https://pdfs.semanticscholar.org/5923/9d5c6c3ef17c0fb860d3809c1d2d3988bd5f.pdf"
+						target="_blank">
+						https://pdfs.semanticscholar.org/5923/9d5c6c3ef17c0fb860d3809c1d2d3988bd5f.pdf</a>
+				</p>
+
+			</div>
+		</section>
+
+
+		<!-- About Me -->
+		<section id="team" class="two">
+			<div class="container">
+
+				<header>
+					<h2>Our Team</h2>
+				</header>
+
+				<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
+				<div class="row">
+					<div class="card col" style="width: 18rem;">
+						<img src="images/pic.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Shengqi Cao</h5>
+							<p class="card-text">
+								UNI: sc5124<br>
+								Email: sc5124@columbia.edu
+							</p>
+							<a href="https://github.com/WenshuoXie/Stock_Price_Prediction/tree/main/final/src"
+								class="btn btn-primary">Our Code</a>
+						</div>
+					</div>
+					<div class="card col" style="width: 18rem;">
+						<img src="images/pic.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Jingchao Hu</h5>
+							<p class="card-text">
+								UNI: jh4312<br>
+								Email: jh4312@columbia.edu
+							</p>
+							<a href="https://github.com/WenshuoXie/Stock_Price_Prediction/tree/main/final/src"
+								class="btn btn-primary">Our Code</a>
+						</div>
+					</div>
+					<div class="card col" style="width: 18rem;">
+						<img src="images/pic.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Wenshuo Xie</h5>
+							<p class="card-text">
+								UNI: wx2283<br>
+								Email: wx2283@columbia.edu</p>
+							<a href="https://github.com/WenshuoXie/Stock_Price_Prediction/tree/main/final/src"
+								class="btn btn-primary">Our Code</a>
+						</div>
+					</div>
 				</div>
 
 
 			</div>
+		</section>
 
-		<!-- Main -->
-			<div id="main">
+		<!-- Contact -->
+		<section id="contact" class="four">
+			<div class="container">
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+				<header>
+					<h2>Contact</h2>
+				</header>
 
-	
-								<h2 class="alt", style="color: white">Stock Price Prediction with Sentiment Analysis</h2>
-								<p>Wenshuo Xie (wx2283)   Shengqi Cao (sc5124)   Jingchao Hu (jh4312)</p>
-								
-
-							<footer>
-								<a href="#background" class="button scrolly">Start</a>
-							</footer>
-
-						</div>
-					</section>
-
-				<!-- Portfolio -->
-					<section id="background" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Background</h2>
-							</header>
-
-							<p align="left">
-							· A company’s stock price reflects public confidence in future development of that company.
-							<br>
-							· Using big data analytics, we aim to extract public sentiment from social media and article columns.
-							<br>
-							· Then we can explore the specific relationship between public sentiment and stock price. Also, we can make predictions of a company’s stock price based on this relationship.
-							<br>
-							</p>
-
-
-
-						</div>
-					</section>
-					
-					
-					<section id="overview" class="three">
-						<div class="container">
-
-							<header>
-								<h2>Overview</h2>
-							</header>
-							
-							<h3 align="left">Architecture</h3>
-
-							<a href="#" class="image fit"><img src="images\overview.png" alt="" /></a>
-							<br>
-							<h3 align="left">Technologies Used</h3>
-
-							<p align="left">
-							<font size="3" face="arial" color="black">
-							Hadoop, Spark, Jupyter Notebook, sklearn(MLP, Random Forest, Linear Regression), D3, Node Js
-							</font>
-							</p>
-
-							
-							<h3 align="left">Dataset</h3>
-
-							<p align="left" style="text-indent:-2em;padding:2em">
-							<font size="4" face="arial" color="black">
-							Historical stock price dataset:
-							<br>
-							</font>
-							
-							<font size="3" face="arial" color="black">
-							Microsoft,Nasdaq (Yahoo Finance)
-							</font>
-							</p>
-
-							<p align="left" style="text-indent:-2em;padding:2em">
-							<font size="4" face="arial" color="black">
-							Twitter7​ ​dataset​:
-							<br>
-							</font>
-							
-							<font size="3" face="arial" color="black">
-							25GB​ ​
-							<br>
-							between​ ​June​ ​to​ ​December​ ​in​ ​2009
-							<br>
-							476​ ​million tweets​ ​collected
-							</font>
-							</p>
-							
-							<h3 align="left">Algorithm</h3>
-
-							<p align="left">
-							<font size="3" face="arial" color="black">
-							Linear Regression, Random Forest and MLP
-							</font>
-							</p>
-							
-							
-						</div>
-					</section>
-					
-					
-					<section id="results" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Results</h2>
-							</header>
-							
-							<h3 align="left">Data visual</h3>
-
-
-
-							<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/tweetcloud12.png" alt="" /></a>
-										<header>
-											<h3>Word Cloud for December</h3>
-										</header>
-									</article>
-							</div>
-
-							
-					        <div class="4u 12u$(mobile)">
-						            <a href="candlestickChart.html">
-						            	<header>
-											<h3 align="left">CandlestickChart</h3>
-										</header>
-						    		</a> 
-					        </div>
-
-					        <div id="show_wrapper"><iframe id="show"></iframe></div>
-
-
-					        <div class="4u 12u$(mobile)">
-						            <a href="forceDirected.html">
-						            	<header>
-											<h3 align="left">Most Similiar Words</h3>
-										</header>
-						    		</a> 
-					        </div>
-
-					        <div id="show_wrapper"><iframe id="show"></iframe></div>
-
-
-
-							<h3 align="left">Test Result</h3>
-							
-							<div class="row">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/LR.png" alt="" /></a>
-										<header>
-											<h3>Linear Regression</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/RF.png" alt="" /></a>
-										<header>
-											<h3>Random Forest</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/MLP.png" alt="" /></a>
-										<header>
-											<h3>MLP</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-
-							<h3 align="left">Result Evaluation</h3>
-
-
-							<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/Evaluation.png" alt="" /></a>
-										<header>
-											<h3>MSE and RMSE for the three algrithms</h3>
-										</header>
-									</article>
-							</div>
-
-							
-							
-						</div>
-					</section>
-					
-					<section id="references" class="three">
-						<div class="container">
-
-							<header>
-								<h2>References</h2>
-							</header>
-
-							<p align="left">
-							1. 476 Million Twitter Tweets, J. Yang, J. Leskovec. Temporal Variation in Online Media . ACM International Conference on Web Search and Data Mining (WSDM '11), 2011. 
-							<br>
-							<a href="https://snap.stanford.edu/data/twitter7.html" target="_blank">
-							https://snap.stanford.edu/data/twitter7.html</a>
-							<br>	
-							2. Skuza, Micheal. Romanowski, Andrzej.(2015). Sentiment Analysis of Twitter Data within Big Data Distributed Environment for Stock Prediction DOI: 10.15439/2015F230 
-							<br>
-							<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7321604&tag=1" target="_blank">http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7321604&tag=1</a>
-							<br>
-							3. Pagolu, S.Venkata. Reddy, N.Kamal. Panda, Ganapati (2016). Sentiment analysis of Twitter data for predicting stock market movements DOI: 10.1109/SCOPES.2016.7955659 
-							<br>
-							<a href="http://ieeexplore.ieee.org/document/7955659/?part=1" target="_blank">
-							http://ieeexplore.ieee.org/document/7955659/?part=1</a>
-							</p>
-
-						</div>
-					</section>
-					
-
-				<!-- About Me -->
-					<section id="team" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Our Team</h2>
-							</header>
-
-							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
-
-
-							<div class="row">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic.png" alt="" /></a>
-										<header>
-											<h3>Long Jiao</h3>
-											<p>lj2463</p>
-										</header>
-									</article>
-								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic.png" alt="" /></a>
-										<header>
-											<h3>Jiliang Ma</h3>
-											<p>jm4750</p>
-										</header>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic.png" alt="" /></a>
-										<header>
-											<h3>Qinyuan Wei</h3>
-											<p>qw2264</p>
-										</header>
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p align="left">
-								<strong>Long Jiao: </strong>lj2463@columbia.edu</br>
-								<strong>Jiliang Ma: </strong>jm4750@columbia.edu</br>
-								<strong>Qinyuan Wei: </strong>qw2264@columbia.edu</br>
-							</br>
-								<strong>Columbia University </strong><a href="http://www.ee.columbia.edu">Department of Electrical Engineering</a><br>
-								<!-- <strong>Class Website:</strong>
+				<p align="left">
+					<strong>Shengqi Cao: </strong>sc5124@columbia.edu</br>
+					<strong>Jingchao Hu: </strong>jh4312@columbia.edu</br>
+					<strong>Wenshuo Xie: </strong>wx2283@columbia.edu</br>
+					</br>
+					<strong>Columbia University </strong><a href="http://www.ee.columbia.edu">Department of Electrical
+						Engineering</a><br>
+					<!-- <strong>Class Website:</strong>
 									<a href="https://edblogs.columbia.edu/eecs4764-001-2018-3/">Columbia University EECS E4764 Fall '18 IoT</a></br> -->
-								<strong>Instructor:</strong> <a href="https://www.ee.columbia.edu/ching-yung-lin">Professsor Ching-Yung Lin</a>
-							</p>
-							
+					<strong>Instructor:</strong> <a href="https://www.ee.columbia.edu/ching-yung-lin">Professsor
+						Ching-Yung Lin</a>
+				</p>
 
-							<!-- <form method="post" action="#">
+
+				<!-- <form method="post" action="#">
 								<div class="row">
 									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
@@ -361,29 +365,31 @@
 								</div>
 							</form> -->
 
-						</div>
-					</section>
-
 			</div>
+		</section>
 
-		<!-- Footer -->
-			<div id="footer">
+	</div>
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; IoT Project | All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+	<!-- Footer -->
+	<div id="footer">
 
-			</div>
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; IoT Project | All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollzer.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
