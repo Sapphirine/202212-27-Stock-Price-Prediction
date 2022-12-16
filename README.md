@@ -25,4 +25,4 @@ The twitter7 dataset: https://snap.stanford.edu/data/twitter7.html
              /python_codes----the jupyter notebooks
             
 # Contributors:
-Qinyuan Wei, Jiliang Ma, Long Jiao
+Shengqi Cao, Jingchao Hu, Wenshuo Xie
