@@ -1,45 +1,48 @@
-Prologue by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+﻿Free Responsive HTML5 Template
+
+Businessr corporate bootstrap responsive web template is a well designed multi-purpose template. This template built with valid HTML5 & CSS3. It's based on latest Bootstrap framework fully responsive web compatible with multi browser and devices. This template can be used for multi-purpose needs like business, consultancy, agency, personal portfolio, profile, mobile website and start-up company.
+
+Key features
+-------------
+Twitter Bootstrap (latest)
+Clean & Developer-friendly HTML5 and CSS3 code
+100% Responsive Layout Design 
+Multipurpose theme
+Google Fonts Support
+Single Page
+Font Awesome 
+7-stroke Fonts by pixeden
+Smooth Scrolling 
+Fully Customizable
+Working Contact Form
 
 
-This is Prologue, a simple, single page responsive site template. It features a
-clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+Credits :
+-------
+=> Design and developed: "WebThemez"  http://webthemez.com
+=> Photos used in template: **Unsplash** - http://unsplash.com, http://risewall.com/home-business-team-wallpapers.html
+=> For more free web themes: http://webthemez.com
+=> Framework : http://getbootstrap.com
+=> Fonts Icon : http://themes-pixeden.com/
 
-Demo content images* are courtesy of the ridiculously talented Felicia Simion. Check out
-more of her amazing work over at deviantART:
-
-http://ineedchemicalx.deviantart.com/
-
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Felicia's work without her explicit permission!)
-
-Demo banner images* courtesy of Unsplash, a radtastic collection of CC0 (public domain)
-images you can use for pretty much whatever.
-
-(* = Not included)
-
-AJ
-n33.co @n33co dribbble.com/n33
-
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+Important Note:
+---------------
+To remove backlink from the template, you need to donate to remove the backlink from the template.
+Any question contact us: webthemez@gmail.com
 
 
-Credits:
+License :
+-------
+**Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
 
-	Demo Images:
-		Felicia Simion (ineedchemicalx.deviantart.com)
-		Unsplash (unsplash.com)
+- You are allowed to use all files for both personal and commercial projects.
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
+- If you use/modify the resources in your projects,we’d appreciate a linkback to this site.
 
-	Other
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
-		background-size polyfill (github.com/louisremi)
-		Respond.js (j.mp/respondjs)
-		jquery.scrolly (n33.co)
-		jquery.scrollzer (n33.co)
-		Skel (skel.io)
+- You do not have rights to redistribute,resell or offer files from this site to any third party
+
+- If you wish to remove backlink from the template, you need to donate min USD $10 to remove backlink (credits) form the template
+
+- If you have any question,feel free to contact us at webthemez@gmail.com
+
+- All images user here is for demo purpose only, we are not responsible for any copyrights.
