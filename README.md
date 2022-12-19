@@ -1,18 +1,19 @@
 ## Big-Data-Analytics-Project
-# Prediction of Stock Trend with Media Sentiment Analysis
+# Stock Price Prediction with Media Sentiment
 ## Abstract:
-In this paper, we apply sentiment analysis on twitter data and machine learning techniques to make prediction on the stock prices. We use twitter data to analysis public sentiment on a certain company, and combine this result with the previous stock prices data to make the prediction about the company’s future stock price. We implement three machine learning prediction method: linear regression, random forest and Multilayer perceptron (MLP). 
+ Stock prediction has been one of the most popular topic in the field of data analysis. It is known to all that public sentiment toward the market has a strong correlation with the stock price. In this paper, we will implement sentiment analysis on the twitter data and utilize some machine learning algorithms to predict the stock price basing on the analysis result of twitter data. After that we will implement a decent web application to display the prediction result. 
 
 # Getting Started
 ## Dataset
 The twitter7 dataset: https://snap.stanford.edu/data/twitter7.html
+https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020?resource=download
+https://www.kaggle.com/datasets/omermetinn/values-of-top-nasdaq-copanies-from-2010-to-2020
+
 
 ## Files
 /Final
 
-      /data----the twitter data
-      
-      /pictures----pictures of results
+      /data----the twitter data and price data
       
       /report_and_pre----our presentation and report
       
